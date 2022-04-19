@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://thymeleaf.org"
+       lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie Motorhomed</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#023B59; color: #C8C8C8;">
+    <div class="container text-center">
+        <h1>Motorhomed - Logowanie</h1>
+
+        <div th:if="${error}">Logowanie nieudane. Sprawdź poprawność adresu email i hasła.</div>
+        <form th:action="@{/login}" method="post" style="max-width: 500px; margin: 0 auto;">
+            <div class="m-3">
+                <div class="form-group row">
+                    <label for="email" class="col-4 col-form-label"
+                           style="padding-bottom: 2vh;">Emial:
+                    </label>
+                    <div class="col-8">
+                        <input type="text" name="email" id="email" class="form-control"
+                               style="background-color:#29455A; border: 1px solid #243B4D; color:#C8C8C8;"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-4 col-form-label"
+                           style="padding-bottom: 2vh;">Hasło:
+                    </label>
+                    <div class="col-8">
+                        <input type="password" name="password" id="password" class="form-control"
+                               style="background-color:#29455A; border: 1px solid #243B4D; color:#C8C8C8;"/>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary" style="background-color: #A96762; border: 1px solid #A96762">Zaloguj</button>
+                </div>
+            </div>
+        </form>
+        <form th:action="@{/register}">
+            <div class="m-3">
+                <div>
+                    <button type="submit" class="btn btn-primary" style="background-color: #D85C27; border: 1px solid #D85C27">Zarejestruj się</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

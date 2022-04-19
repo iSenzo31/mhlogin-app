@@ -24,11 +24,8 @@ public class TestUserRepo {
     public void testCreateUser(){
         User user = new User();
         user.setEmail("jannowak@gmail.com");
-        user.setLogin("nowacki15");
         user.setFirstName("Jan");
         user.setLastName("Nowak");
-        user.setPhoneNumber("983615347");
-        user.setCity("Strzegom");
         user.setPassword("MojeHaslo%28");
 
         User savedUser = repo.save(user);

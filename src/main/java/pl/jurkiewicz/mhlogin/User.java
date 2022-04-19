@@ -1,10 +1,10 @@
 package pl.jurkiewicz.mhlogin;
 
 import javax.persistence.*;
-
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "USER_ID")
@@ -15,14 +15,14 @@ public class User {
     @Column(name="USER_PASSWORD", nullable = false, length = 64)
     private String password;
     @Column(name = "USER_NAME", nullable = false, unique = true, length = 32)
-    private String login;
-    @Column(name = "USER_FIRST_NAME",nullable = false, length = 32)
+    private String nickName;
+    @Column(name = "USER_FIRST_NAME",nullable = true, length = 32)
     private String firstName;
     @Column(name = "USER_LAST_NAME",nullable = true, length = 32)
     private String lastName;
-    @Column(name = "USER_PHONE_NUMBER", nullable = false, precision = 9, scale = 0)
+    @Column(name = "USER_PHONE_NUMBER", nullable = true, precision = 9, scale = 0)
     private String phoneNumber;
-    @Column(name= "USER_CITY", nullable = false, length = 32)
+    @Column(name= "USER_CITY", nullable = true, length = 32)
     private String city;
 
     public Long getId() {
@@ -41,12 +41,12 @@ public class User {
         this.email = email;
     }
 
-    public String getLogin() {
-        return login;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getFirstName() {
@@ -91,7 +91,5 @@ public class User {
 
     public User() {
     }
-
-
 
 }

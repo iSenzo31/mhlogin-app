@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MotorHomed - Test Website</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body style="background-color:#023B59; color: #C8C8C8;">
+    <div class="container text-center">
+        <div>
+            <h1>Motorhomed - Zalogowano</h1>
+        </div>
+        <form th:action="@{/logout}" method="post">
+            <p>
+                Witaj <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+            </p>
+            <button type="submit" class="btn btn-primary" style="background-color: #D85C27; border: 1px solid #D85C27">Wyloguj</button>
+        </form>
+        <form th:action="@{/}">
+            <div class="m-3">
+                <div>
+                    <button type="submit" class="btn btn-primary" style="background-color: #D85C27; border: 1px solid #D85C27">Home</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

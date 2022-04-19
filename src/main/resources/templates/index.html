@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MotorHomed - Home</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container text-center">
+        <div>
+            <h1>Witamy na stronie MotorHomed</h1>
+        </div>
+        <div>
+            <h3><a th:href="@{/users}">Lista użytkowników</a></h3>
+            <h3><a th:href="@{/register}">Zarejestruj</a></h3>
+            <h3><a th:href="@{/login}">Zaloguj</a></h3>
+        </div>
+    </div>
+</body>
+</html>
